@@ -601,3 +601,9 @@ h1 > span {
         margin-block-end: 0;
     }
 }
+
+/* Contact */
+
+.contact__text {
+    text-align: center;
+}
