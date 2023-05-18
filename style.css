@@ -76,7 +76,7 @@ a {
 
 a.underline {
     display: inline-block;
-    padding-bottom: 10px;
+    padding-bottom: 0.625rem;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: 2.29px;
@@ -118,6 +118,8 @@ a:hover {
 
 /* Header */
 .header {
+    position: relative;
+    z-index: 1;
     margin-top: 20px;
 }
 
@@ -151,6 +153,10 @@ a:hover {
 }
 
 @media (min-width: 37.5em) { 
+
+    .header {
+        margin-block-start: 30px;
+    }
     .header__nav {
         justify-content: flex-start;
         align-items: center;
@@ -159,19 +165,14 @@ a:hover {
     }
 
     .header__home {
-        flex: 1;
+        flex: 0 1 auto;
         margin-inline-end: auto;
     }
 }
 
 /* Hero */
-.hero {
-    
-}
-
 .hero__wrappper {
     padding-bottom: 80px;
-    border-bottom: 1px solid var(--text2);
 }
 
 .hero__image {
@@ -180,12 +181,37 @@ a:hover {
     left: 50%;
     translate: -50%;
     display: block;
+    width: 174px;
+    height: auto;
+}
+
+.hero__rings {
+    position: absolute;
+    right: 50%;
+    top: 130px;
+    z-index: -1;
+    height: auto;
+}
+
+.hero__circle {
+    position: relative;
+    top: 171px;
+    margin-bottom: -129px;
+    translate: calc(100vw - 64px - 16px);
 }
 
 .hero__text {
     position: relative;
     text-align: center;
     margin-top: 335px;
+}
+
+.hero__headline {
+    margin-block-end: 24px;
+}
+
+.hero__headline > br {
+    display: none;
 }
 
 h1 > span {
@@ -195,5 +221,44 @@ h1 > span {
     background-size: 8px 4px;
 }
 
+.hero__description {
+    margin-block-end: 24px;
+}
 
+@media (min-width: 37.5em) {
+
+    .hero__image {
+        position: relative;
+        width: 42vw;
+        max-width: 445px;
+        height: auto;
+        left: auto;
+        right: 0;
+        translate: 0;
+    }
+
+    .hero__rings {
+        top: 85px;
+    }
+
+    .hero__circle {
+        top: 468px;
+    }
+
+    .hero__text {
+        width: 62vw;
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .hero__headline > br {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 62.5rem) {
+    .hero__headline > br {
+        display: none;
+    }
+}
 
