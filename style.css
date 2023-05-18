@@ -349,3 +349,21 @@ h1 > span {
     }
 }
 
+/* Skills */
+.skills__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-block: 40px;
+}
+
+.skills__item {
+    text-align: center;
+}
+
+.skills__title {
+    font-size: 2rem;
+    font-size: clamp(2rem, 0.33rem + 7.11vw, 3rem);
+    line-height: 1.17;
+    margin-bottom: 2px;
+}
