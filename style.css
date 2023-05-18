@@ -31,6 +31,11 @@ html {
     box-sizing: inherit;
 }
 
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
 body, input, textarea, button {
     font-family: 'Space Grotesk', sans-serif;
 }
@@ -45,7 +50,7 @@ body {
 }
 
 .bg-less-dark {
-    border-color: var(--bg-body2);
+    background-color: var(--bg-body2);
 }
 
 h1, h2, h3, p {
@@ -101,10 +106,10 @@ a.underline, button {
     text-transform: uppercase;
     color: var(--text1);
     text-decoration: none;
-    background-image: linear-gradient(to right, var(--accent) 75%, var(--accent) 75%);
-    background-position: 0 2.1em;
-    background-repeat: repeat-x;
-    background-size: 8px 2px;
+    background-image: linear-gradient(to right, var(--accent) 75%, var(--accent) 75%) !important;
+    background-position: 0 2.1em !important;
+    background-repeat: repeat-x !important;
+    background-size: 8px 2px !important;
 }
 
 a:hover {
@@ -639,7 +644,6 @@ h1 > span {
 
 .contact__control input, .contact__control textarea {
     width: 100%;
-    margin-block-end: 16px;
     padding-block: 16px;
     padding-inline: 24px;
     border: none;

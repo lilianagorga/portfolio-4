@@ -205,7 +205,11 @@
                         Please fill in the form, and I will get back to you as soon as possibile.
                     </p>
                 </div>
-                <form action="" class="contact__form">
+                <form action="" class="contact__form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="hidden">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <div class="contact__control">
                         <label for="name" class="visually-hidden">Name</label>
                         <input type="text" id="name" name="name" placeholder="Name" required>
